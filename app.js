@@ -10,6 +10,8 @@ var loginRouter = require('./routes/login');
 var homeRouter = require('./routes/home');
 var leadsRouter = require('./routes/leads');
 var servicesRouter = require('./routes/services');
+var passwordRouter = require('./routes/password');
+
 
 
 var app = express();
@@ -29,6 +31,8 @@ app.use('/login', loginRouter);
 app.use('/home', homeRouter);
 app.use('/leads', leadsRouter);
 app.use('/services', servicesRouter);
+app.use('/password', passwordRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

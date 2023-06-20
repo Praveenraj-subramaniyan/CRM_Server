@@ -23,10 +23,10 @@ const userSchema = new mongoose.Schema(
     isEditPermission:{
         type:Boolean
     },
-    // forgetPassword: {
-    //   time: Date,
-    //   otp: String,
-    // },
+    forgetPassword: {
+      time: Date,
+      otp: String,
+    },
   },
   { collection: "User" }
 );

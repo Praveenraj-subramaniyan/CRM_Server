@@ -75,7 +75,7 @@ async function EditServices(emailid, password, edit) {
       const content = `
       <h4>Hi Eveyone,</h4>
       <h5></h5>
-      <p>${edit.company} details is edited by ${loginCredentials.name} - ${loginCredentials.email}"</p>
+      <p><b>${edit.company}</b> details is edited by ${loginCredentials.name} - ${loginCredentials.email}"</p>
       <p>Regards,</p>
       <p>CRM</p>
       `;
@@ -109,7 +109,7 @@ async function StatusServices(emailid, password, id,status) {
         const content = `
         <h4>Hi Eveyone,</h4>
         <h5></h5>
-        <p>${services.company} progress is changed into ${status}  by ${loginCredentials.name} - ${loginCredentials.email}"</p>
+        <p><b>${services.company}</b>  status is changed into <b>${status}</b>  by ${loginCredentials.name} - ${loginCredentials.email}"</p>
         <p>Regards,</p>
         <p>CRM</p>
         `;
