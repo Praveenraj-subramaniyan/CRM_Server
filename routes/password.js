@@ -6,7 +6,6 @@ const { ForgetPassword, NewPassword } =require("../Controller/passwordController
 router.post("/forget", async function (req, res, next) {
   try {
     const { email } = await req.body;
-    console.log(email)
     var checkCredentials = await CheckUser(email);
     if (checkCredentials === false) {
       res.status(400).send(false);

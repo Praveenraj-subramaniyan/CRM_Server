@@ -29,7 +29,6 @@ router.post("/verify", async (req, res) => {
     const {userDetails,
       loginDataFromCookie,} = await req.body;
     var registerCredentials = await CheckUser(userDetails.email);
-    console.log("registerCredentials",registerCredentials);
     if (registerCredentials === false) {
       await InsertVerifyUser(userDetails.name,userDetails.email,userDetails.role,userDetails.isEdit,loginDataFromCookie);
       res.status(200).send(true);
@@ -37,7 +36,6 @@ router.post("/verify", async (req, res) => {
       res.status(200).send("Already registered");
     }
   } catch (error) {
-    console.log("catch");
     console.log(error);
     res.status(400).send("error");
   }
