@@ -13,15 +13,19 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
+      required: true,
     },
     isAdmin:{
-        type:Boolean
+        type:Boolean,
+        required: true,
     },
     isManager:{
-        type:Boolean
+        type:Boolean,
+        required: true,
     },
     isEditPermission:{
-        type:Boolean
+        type:Boolean,
+        required: true,
     },
     forgetPassword: {
       time: Date,
