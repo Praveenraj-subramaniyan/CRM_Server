@@ -12,6 +12,7 @@ var leadsRouter = require('./routes/leads');
 var servicesRouter = require('./routes/services');
 var passwordRouter = require('./routes/password');
 var signupRouter = require('./routes/signup');
+var adduserRouter = require('./routes/adduser');
 
 
 
@@ -34,6 +35,7 @@ app.use('/leads', leadsRouter);
 app.use('/services', servicesRouter);
 app.use('/password', passwordRouter);
 app.use('/signup', signupRouter);
+app.use('/adduser', adduserRouter);
 
 
 // catch 404 and forward to error handler

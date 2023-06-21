@@ -11,7 +11,10 @@ async function LeadCard(emailid, password) {
       return false;
     } else {
       const leads = await Lead.find().lean();
-      return leads;
+      const isAdmin = loginCredentials.isAdmin;
+      const isManager = loginCredentials.isManager;
+      const isEditPermission = loginCredentials.isEditPermission;
+      return {leads,isAdmin,isManager,isEditPermission};
     }
   } catch (error) {
     console.log(error);

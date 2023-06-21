@@ -11,7 +11,10 @@ async function ServicesCard(emailid, password) {
       return false;
     } else {
       const services = await ServiceRequest.find().lean();
-      return services;
+      const isAdmin = loginCredentials.isAdmin;
+      const isManager = loginCredentials.isManager;
+      const isEditPermission = loginCredentials.isEditPermission;
+      return {services,isAdmin,isManager,isEditPermission};
     }
   } catch (error) {
     console.log(error);
