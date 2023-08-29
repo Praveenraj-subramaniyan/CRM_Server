@@ -49,7 +49,7 @@ async function NewPassword(email, otp, newPassword) {
         await userDetails.save();
         const content = `
         <h4>Hi there,</h4>
-        <p>Password chnaged successfully</p>
+        <p>Password changed successfully</p>
         <p><b>Regards</b>,</p>
         <P>CRM</p>
       `;
